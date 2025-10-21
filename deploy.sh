@@ -462,10 +462,15 @@ printf "✅ Remote containers deployed (or updated).\n" >&3
 # -------------------------
 # STEP 7: Configure NGINX reverse proxy
 # -------------------------
+
 printf "\n🌐 Configuring NGINX as reverse proxy (port 80 -> %s)...\n" "$APP_PORT" >&3
 
-# Compose nginx config (here-doc safe)
-NGINX_CONF="server {
+ssh -i "$SSH_KEY_PATH" -o BatchMode=yes "$SSH_USER@$SERVER_IP" bash <<EOF
+    set -e
+    
+    # Create nginx config with cat (more reliable than printf over ssh)
+    sudo tee /etc/nginx/sites-available/app.conf > /dev/null <<'NGINX_EOF'
+server {
     listen 80;
     server_name _;
 
@@ -482,17 +487,26 @@ NGINX_CONF="server {
         proxy_read_timeout 60s;
     }
 }
-"
+NGINX_EOF
 
-# Upload and enable nginx config
-ssh -i "$SSH_KEY_PATH" -o BatchMode=yes "$SSH_USER@$SERVER_IP" "
-    set -e
-    printf '%s\n' \"$NGINX_CONF\" | sudo tee /etc/nginx/sites-available/app.conf >/dev/null
+    # Enable the config
     sudo ln -sf /etc/nginx/sites-available/app.conf /etc/nginx/sites-enabled/app.conf
+    
+    # Remove default if it exists
+    sudo rm -f /etc/nginx/sites-enabled/default
+    
+    # Test configuration
     sudo nginx -t
-    sudo systemctl reload nginx
+    
+    # Start or reload nginx
+    if sudo systemctl is-active --quiet nginx; then
+        sudo systemctl reload nginx
+    else
+        sudo systemctl start nginx
+    fi
+    
     echo 'NGINX_CONFIG_DONE'
-"
+EOF
 
 printf "✅ NGINX configured and reloaded on remote host.\n" >&3
 

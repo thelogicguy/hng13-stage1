@@ -1,0 +1,156 @@
+From https://github.com/thelogicguy/hng13-stage1
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+---------------------------------------------
+Remote Hostname:  ip-172-31-25-162
+OS:  PRETTY_NAME="Ubuntu 24.04.3 LTS"
+Docker installed?:  Yes
+---------------------------------------------
+Hit:1 http://us-west-1.ec2.archive.ubuntu.com/ubuntu noble InRelease
+Get:2 http://us-west-1.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:3 http://us-west-1.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Hit:4 https://download.docker.com/linux/ubuntu noble InRelease
+Get:5 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:6 http://us-west-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1523 kB]
+Get:7 http://us-west-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [175 kB]
+Get:8 http://us-west-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 c-n-f Metadata [15.3 kB]
+Get:9 http://us-west-1.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [377 kB]
+Get:10 http://us-west-1.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Get:11 http://us-west-1.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Get:12 http://us-west-1.ec2.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7140 B]
+Get:13 http://us-west-1.ec2.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [11.0 kB]
+Get:14 http://us-west-1.ec2.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+Get:15 http://us-west-1.ec2.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Get:16 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [21.6 kB]
+Get:17 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [52.2 kB]
+Get:18 http://security.ubuntu.com/ubuntu noble-security/universe amd64 c-n-f Metadata [19.3 kB]
+Get:19 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [208 B]
+Get:20 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 c-n-f Metadata [500 B]
+Get:21 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [208 B]
+Get:22 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 c-n-f Metadata [384 B]
+Fetched 2583 kB in 1s (2232 kB/s)
+Reading package lists...
+Docker already installed
+Docker Compose already installed
+NGINX already installed
+REMOTE_PREP_DONE
+Stopping previous containers (if any)...
+time="2025-10-21T10:44:54Z" level=warning msg="/home/ubuntu/app_deploy/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Container web_app  Stopping
+ Container web_app  Stopped
+ Container web_app  Removing
+ Container web_app  Removed
+ Network app_deploy_default  Removing
+Starting containers...
+ Network app_deploy_default  Removed
+time="2025-10-21T10:44:55Z" level=warning msg="/home/ubuntu/app_deploy/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+#1 [internal] load local bake definitions
+#1 reading from stdin 493B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from dockerfile
+#2 transferring dockerfile: 321B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.11-slim
+#3 DONE 1.2s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 70.75kB 0.0s done
+#5 DONE 0.0s
+
+#6 [1/4] FROM docker.io/library/python:3.11-slim@sha256:381952bf94549972abbac4a609a4bb54b6adf1ba71b1057a8e8453c03c017054
+#6 resolve docker.io/library/python:3.11-slim@sha256:381952bf94549972abbac4a609a4bb54b6adf1ba71b1057a8e8453c03c017054 0.0s done
+#6 sha256:381952bf94549972abbac4a609a4bb54b6adf1ba71b1057a8e8453c03c017054 10.37kB / 10.37kB done
+#6 sha256:a0e69305a97c7eaa814e4a983585e779106daa209ed1f3495902f2e0d938a6f1 1.75kB / 1.75kB done
+#6 sha256:ff15e80be861655d8eaf4fe97b2b83d7003c34119848f2febd31bd84406c92bb 5.38kB / 5.38kB done
+#6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 0B / 29.78MB 0.2s
+#6 sha256:a9ffe18d7fdb9bb2f5b878fdc08887ef2d9644c86f5d4e07cc2e80b783fbea04 0B / 1.29MB 0.2s
+#6 sha256:e73850a50582f63498f7551a987cc493e848413fcae176379acff9144341f77f 0B / 14.36MB 0.2s
+#6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 4.19MB / 29.78MB 0.3s
+#6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 12.58MB / 29.78MB 0.5s
+#6 sha256:a9ffe18d7fdb9bb2f5b878fdc08887ef2d9644c86f5d4e07cc2e80b783fbea04 1.29MB / 1.29MB 0.4s done
+#6 sha256:e73850a50582f63498f7551a987cc493e848413fcae176379acff9144341f77f 2.10MB / 14.36MB 0.5s
+#6 sha256:19fb8589da0207a0e7d3baa0c1b71a67136b1ad06c4b2e65cc771664592e6d9e 0B / 249B 0.5s
+#6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 22.02MB / 29.78MB 0.7s
+#6 sha256:e73850a50582f63498f7551a987cc493e848413fcae176379acff9144341f77f 8.39MB / 14.36MB 0.7s
+#6 sha256:19fb8589da0207a0e7d3baa0c1b71a67136b1ad06c4b2e65cc771664592e6d9e 249B / 249B 0.5s done
+#6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 24.12MB / 29.78MB 0.8s
+#6 sha256:e73850a50582f63498f7551a987cc493e848413fcae176379acff9144341f77f 9.44MB / 14.36MB 0.8s
+#6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.42MB / 29.78MB 0.9s
+#6 sha256:e73850a50582f63498f7551a987cc493e848413fcae176379acff9144341f77f 12.58MB / 14.36MB 0.9s
+#6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.9s done
+#6 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 0.1s
+#6 sha256:e73850a50582f63498f7551a987cc493e848413fcae176379acff9144341f77f 14.36MB / 14.36MB 1.0s done
+#6 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 1.5s done
+#6 extracting sha256:a9ffe18d7fdb9bb2f5b878fdc08887ef2d9644c86f5d4e07cc2e80b783fbea04
+#6 extracting sha256:a9ffe18d7fdb9bb2f5b878fdc08887ef2d9644c86f5d4e07cc2e80b783fbea04 0.2s done
+#6 extracting sha256:e73850a50582f63498f7551a987cc493e848413fcae176379acff9144341f77f
+#6 extracting sha256:e73850a50582f63498f7551a987cc493e848413fcae176379acff9144341f77f 1.0s done
+#6 extracting sha256:19fb8589da0207a0e7d3baa0c1b71a67136b1ad06c4b2e65cc771664592e6d9e
+#6 extracting sha256:19fb8589da0207a0e7d3baa0c1b71a67136b1ad06c4b2e65cc771664592e6d9e done
+#6 DONE 4.1s
+
+#7 [2/4] WORKDIR /app
+#7 DONE 0.2s
+
+#8 [3/4] COPY . .
+#8 DONE 0.1s
+
+#9 [4/4] RUN pip install --no-cache-dir -r requirements.txt
+#9 3.206 Collecting flask==3.0.3 (from -r requirements.txt (line 1))
+#9 3.233   Downloading flask-3.0.3-py3-none-any.whl.metadata (3.2 kB)
+#9 3.281 Collecting Werkzeug>=3.0.0 (from flask==3.0.3->-r requirements.txt (line 1))
+#9 3.287   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#9 3.317 Collecting Jinja2>=3.1.2 (from flask==3.0.3->-r requirements.txt (line 1))
+#9 3.321   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#9 3.339 Collecting itsdangerous>=2.1.2 (from flask==3.0.3->-r requirements.txt (line 1))
+#9 3.343   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#9 3.371 Collecting click>=8.1.3 (from flask==3.0.3->-r requirements.txt (line 1))
+#9 3.374   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#9 3.390 Collecting blinker>=1.6.2 (from flask==3.0.3->-r requirements.txt (line 1))
+#9 3.394   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#9 3.476 Collecting MarkupSafe>=2.0 (from Jinja2>=3.1.2->flask==3.0.3->-r requirements.txt (line 1))
+#9 3.480   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#9 3.498 Downloading flask-3.0.3-py3-none-any.whl (101 kB)
+#9 3.504    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.7/101.7 kB 52.5 MB/s eta 0:00:00
+#9 3.509 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#9 3.513 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#9 3.517    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 275.2 MB/s eta 0:00:00
+#9 3.521 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#9 3.526 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#9 3.529    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 286.4 MB/s eta 0:00:00
+#9 3.534 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#9 3.538    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 312.9 MB/s eta 0:00:00
+#9 3.542 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#9 3.609 Installing collected packages: MarkupSafe, itsdangerous, click, blinker, Werkzeug, Jinja2, flask
+#9 4.085 Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.3 Werkzeug-3.1.3 blinker-1.9.0 click-8.3.0 flask-3.0.3 itsdangerous-2.2.0
+#9 4.085 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 4.167 
+#9 4.167 [notice] A new release of pip is available: 24.0 -> 25.2
+#9 4.167 [notice] To update, run: pip install --upgrade pip
+#9 DONE 4.4s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.2s done
+#10 writing image sha256:97398cde3aeae82d19b9981bd5dff3d90a762ff54650dd02f8be706addd122f4 done
+#10 naming to docker.io/library/app_deploy-web 0.0s done
+#10 DONE 0.3s
+
+#11 resolving provenance for metadata file
+#11 DONE 0.0s
+ app_deploy-web  Built
+ Network app_deploy_default  Creating
+ Network app_deploy_default  Created
+ Container app_deploy-web-1  Creating
+ Container app_deploy-web-1  Created
+ Container app_deploy-web-1  Starting
+DEPLOY_DONE
+ Container app_deploy-web-1  Started
+2025/10/21 10:45:11 [emerg] 11008#11008: invalid number of arguments in "proxy_set_header" directive in /etc/nginx/sites-enabled/app.conf:9
+nginx: configuration file /etc/nginx/nginx.conf test failed
